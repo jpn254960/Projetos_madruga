@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batatinhas Delícia - As melhores batatas da região</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        html {
+  scroll-behavior: smooth;
+}
+        .hero-pattern {
+            background-image: radial-gradient(circle, rgba(255,255,255,0.8) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+         @keyframes redFlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+        /* Changed potato-bg to a light gray, as pure white might be too stark with red/black */
+        .potato-bg {
+            background-color: #f7f7f7; 
+        }
+        .potato-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        /* New hover effect for navigation links */
+        .nav-link:hover {
+            color: #E53E3E; /* A subtle red on hover */
+        }
+        #inicio{
+                 background: linear-gradient(135deg, #8e0e00, #b71c1c, #e53935, #ff7961);
+      background-size: 400% 400%;
+      animation: redFlow 15s ease infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+        #logo{
+            max-height: 6vh;
+            color: white;
+            margin: auto;
+        }
+        #inicio h1,p{
+            color: white;
+            text-shadow: 0px 0px 1vw rgba(0, 0, 0, 0.071);
+        }
+        #bt1{
+            background-color: transparent;
+            color: #ffffff;
+            border: 0.2vw solid #ffffff;
+        }
+        #bt1:hover{
+            background-color: white;
+            color: #b71c1c;
+            border: 0.2vw solid #b71c1c;
+            
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-100">
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+                <img src="Pringles-Logo.png" alt="" id="logo">
+            <div class="flex items-center space-x-4">
+                <button class="relative">
+                    <i class="fas fa-shopping-cart text-red-600 text-xl"></i>
+                    <span class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section id="inicio" class="hero-pattern potato-bg py-16 md:py-24">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">As melhores batatinhas do MUNDO!</h1>
+                <p class="text-lg text-white-700 mb-6">Descubra nossa seleção premium de batatas frescas, crocantes e cheias de sabor. Perfeitas para qualquer ocasião!</p>
+                <div class="flex space-x-4">
+                    <button class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-full font-medium transition shadow-lg" onclick="location.href='#produtos'">
+                        Comprar Agora
+                    </button>
+                    <button class="border-2 border-red-600 text-red-600 hover:bg-red-50 px-6 py-3 rounded-full font-medium transition" id="bt1" onclick="location.href='#sobre'">
+                        Saber Mais
+                    </button>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="small_PROD_15000005508_P1_ff54ce576b.webp" 
+                    alt="Batatas frescas" 
+                    class="rounded-lg floating max-w-md w-full h-auto">
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center p-6 rounded-lg bg-white border border-gray-200 shadow-sm">
+                    <div class="text-red-600 text-4xl mb-4">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">100% Natural</h3>
+                    <p class="text-gray-600">Batatas cultivadas sem agrotóxicos, com todo cuidado e carinho.</p>
+                </div>
+                
+                <div class="text-center p-6 rounded-lg bg-white border border-gray-200 shadow-sm">
+                    <div class="text-red-600 text-4xl mb-4">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Entrega Rápida</h3>
+                    <p class="text-gray-600">Receba suas batatinhas fresquinhas em até 24h após a colheita.</p>
+                </div>
+                
+                <div class="text-center p-6 rounded-lg bg-white border border-gray-200 shadow-sm">
+                    <div class="text-red-600 text-4xl mb-4">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Qualidade Garantida</h3>
+                    <p class="text-gray-600">Se não gostar, devolvemos seu dinheiro sem perguntas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ ---
+
+<section id="produtos" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-2">Nossas Pringles</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">Conheça nossa variedade de sabores incríveis e leve a diversão pra casa!</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            <div class="bg-white rounded-xl overflow-hidden shadow-md potato-card transition duration-300">
+                <div class="relative">
+                    <img src="small_PROD_15000005508_P1_ff54ce576b.webp" 
+                                alt="Pringles Original" 
+                                class="w-full h-48 object-cover">
+                    <span class="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">CLÁSSICO</span>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-bold text-lg text-gray-800 mb-1">Pringles Original</h3>
+                    <p class="text-gray-600 text-sm mb-3">O sabor icônico que você já conhece e ama!</p>
+                    <div class="flex justify-between items-center">
+                        <span class="font-bold text-red-600">R$ 14,99</span>
+                        <button class="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded-full text-sm transition">
+                            <i class="fas fa-cart-plus"></i> Adicionar
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl overflow-hidden shadow-md potato-card transition duration-300">
+                <div class="relative">
+                    <img src="img_QzWee6DPvjECzwgq.png" 
+                                alt="Pringles Creme e Cebola" 
+                                class="w-full h-48 object-cover">
+                </div>
+                <div class="p-4">
+                    <h3 class="font-bold text-lg text-gray-800 mb-1">Pringles Creme e Cebola</h3>
+                    <p class="text-gray-600 text-sm mb-3">Irresistível e cheio de sabor para qualquer hora!</p>
+                    <div class="flex justify-between items-center">
+                        <span class="font-bold text-red-600">R$ 15,99</span>
+                        <button class="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded-full text-sm transition">
+                            <i class="fas fa-cart-plus"></i> Adicionar
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl overflow-hidden shadow-md potato-card transition duration-300">
+                <div class="relative">
+                    <img src="54003-batata-pringles-queijo-109g.20230502123828.jpg" 
+                                alt="Pringles Queijo" 
+                                class="w-full h-48 object-cover">
+                    <span class="absolute top-2 right-2 bg-black text-white text-xs px-2 py-1 rounded-full">POPULAR</span>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-bold text-lg text-gray-800 mb-1">Pringles Sabor Queijo</h3>
+                    <p class="text-gray-600 text-sm mb-3">O sabor intenso do queijo que você adora, agora em Pringles!</p>
+                    <div class="flex justify-between items-center">
+                        <span class="font-bold text-red-600">R$ 16,99</span>
+                        <button class="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded-full text-sm transition">
+                            <i class="fas fa-cart-plus"></i> Adicionar
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl overflow-hidden shadow-md potato-card transition duration-300">
+                <div class="relative">
+                    <img src="l-7ef5ff63c7fb4dd289ea2ff38fc08833.jpeg" 
+                                alt="Pringles Churrasco" 
+                                class="w-full h-48 object-cover">
+                </div>
+                <div class="p-4">
+                    <h3 class="font-bold text-lg text-gray-800 mb-1">Pringles Sabor Churrasco</h3>
+                    <p class="text-gray-600 text-sm mb-3">O defumado perfeito para o seu snack!</p>
+                    <div class="flex justify-between items-center">
+                        <span class="font-bold text-red-600">R$ 15,99</span>
+                        <button class="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded-full text-sm transition">
+                            <i class="fas fa-cart-plus"></i> Adicionar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-12">
+            <button class="border-2 border-red-600 text-red-600 hover:bg-red-50 px-6 py-3 rounded-full font-medium transition">
+                Ver Todos os Sabores
+            </button>
+        </div>
+    </div>
+</section>
+
+    <section id="sobre" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <img src="img_QzWee6DPvjECzwgq.png" 
+                            alt="Fazenda de batatas" 
+                            class="rounded-lg shadow-lg w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Nossa História</h2>
+                    <p class="text-gray-700 mb-4">As Pringles são um ícone global dos snacks, reconhecidas instantaneamente por sua embalagem em formato de tubo e suas batatas perfeitamente uniformes e empilháveis. Diferente das batatas chips tradicionais, as Pringles são feitas a partir de flocos de batata desidratados, misturados com outros ingredientes como farinha de milho e amido, para depois serem moldadas em sua característica forma de "paraboloide hiperbólica" (sim, esse é o nome da forma!). </p>
+                    <p class="text-gray-700 mb-6">O que torna as Pringles tão populares no Brasil e no mundo é a sua crocância única e a variedade de sabores intensos. Desde o clássico Original, que oferece o sabor puro da batata com uma pitada de sal, até opções mais ousadas como Creme e Cebola, Queijo, Churrasco e Cheddar e Bacon, há um sabor para cada paladar.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="text-red-600 mr-3 mt-1">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Qualidade Premium</h4>
+                                <p class="text-gray-600 text-sm">Selecionamos apenas as melhores batatas para nossos clientes</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-red-600 mr-3 mt-1">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Agricultura Sustentável</h4>
+                                <p class="text-gray-600 text-sm">Praticamos métodos de cultivo que preservam o meio ambiente</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-red-600 mr-3 mt-1">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Satisfação Garantida</h4>
+                                <p class="text-gray-600 text-sm">Se não amar nossas batatinhas, devolvemos seu dinheiro</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-2">O que dizem nossos clientes</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">A satisfação dos nossos clientes é nossa maior recompensa</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="text-red-500 text-2xl mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4">"As batatas são incríveis! Nunca comi nada tão gostoso. A entrega foi super rápida e o atendimento excelente."</p>
+                    <div class="flex items-center">
+                        <img src="WhatsApp Image 2025-07-31 at 05.14.36.jpeg" alt="Cliente" class="w-10 h-10 rounded-full mr-3" style="object-fit: cover;">
+                        <div>
+                            <h4 class="font-bold text-gray-800">JP ( Eu )</h4>
+                            <p class="text-gray-600 text-sm">São Paulo, SP</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="text-red-500 text-2xl mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4">"Compro toda semana e nunca me decepcionei. As batatas doces são as melhores que já provei!"</p>
+                    <div class="flex items-center">
+                        <img src="WhatsApp Image 2025-07-31 at 05.13.50.jpeg" alt="Cliente" class="w-10 h-10 rounded-full mr-3" style="object-fit: cover;">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Kauã betfuer (deve estar errado)</h4>
+                            <p class="text-gray-600 text-sm">Patriarca, SP</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="text-red-500 text-2xl mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4">"Produtos de altíssima qualidade. Recomendo a todos que apreciam uma boa batata bem preparada."</p>
+                    <div class="flex items-center">
+                        <img src="WhatsApp Image 2025-07-31 at 05.14.03.jpeg" alt="Cliente" class="w-10 h-10 rounded-full mr-3" style="object-fit: cover;">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Renato lino</h4>
+                            <p class="text-gray-600 text-sm">itaquera, SP</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-2">Entre em Contato</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">Tem sugestões? Mande uma mensagem que vejo se faço em breve!</p>
+                </div>
+                
+                <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="nome" class="block text-gray-700 font-medium mb-2">Nome</label>
+                        <input type="text" id="nome" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
+                    </div>
+                    
+                    <div class="md:col-span-2">
+                        <label for="assunto" class="block text-gray-700 font-medium mb-2">Assunto</label>
+                        <input type="text" id="assunto" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
+                    </div>
+                    
+                    <div class="md:col-span-2">
+                        <label for="mensagem" class="block text-gray-700 font-medium mb-2">Mensagem</label>
+                        <textarea id="mensagem" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"></textarea>
+                    </div>
+                    
+                    <div class="md:col-span-2">
+                        <button type="submit" class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-full font-medium transition shadow-lg w-full md:w-auto" onclick="enviar_msg()">
+                            Enviar Mensagem
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 bg-black text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-2xl font-bold mb-4">Projeto da madrugada</h2>
+            <p class="max-w-2xl mx-auto mb-6">isso é um monte de código e design que nasceram da falta do que fazer, mas que, no fim das contas, viraram algo bem divertido – e que, quem sabe, te arranque uma risada ou um "hummm, interessante</p>
+            
+        
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-potato text-red-500 text-2xl"></i>
+                        <span class="text-xl font-bold">Projeto da madrugada</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Ideias aleatorias serão geradas durante a semana, toda informação aqui é ficticio </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-red-500 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Links Úteis</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-red-500 transition">Termos de Serviço</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-red-500 transition">Política de Privacidade</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-red-500 transition">Trocas e Devoluções</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-red-500 transition">Perguntas Frequentes</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Nossa Loja</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-red-500 transition">Todos os Produtos</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-red-500 transition">Ofertas Especiais</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-red-500 transition">Novidades</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-red-500 transition">Mais Vendidos</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contato</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-2 text-red-500"></i>
+                            <span>Rua das Batatas, 123 - Centro, Batatópolis - MG</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt mt-1 mr-2 text-red-500"></i>
+                            <span>(31) 98765-4321</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-2 text-red-500"></i>
+                            <span>contato@batatinhasdelicia.com.br</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-clock mt-1 mr-2 text-red-500"></i>
+                            <span>Seg-Sex: 8h-18h | Sáb: 8h-12h</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500">
+                <p>&copy; 2025 Copia site pingles. Todos os direitos reservados. - desenvolvido por jp</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="backToTop" class="fixed bottom-6 right-6 bg-red-600 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Back to Top Button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        function enviar_msg(){
+           var url='https://wa.me/5511947950630?text='
+            var nome=document.getElementById('nome').value
+            var assunto = document.getElementById('assunto').value
+            var msg= document.getElementById('mensagem').value
+            var resultado=`sou o(a) ${nome} meu assunto é ${assunto} minha mensagem é ${msg}`
+            open(url+encodeURIComponent(resultado))
+        }
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Simple cart functionality
+        const addToCartButtons = document.querySelectorAll('.fa-cart-plus').forEach(button => {
+            button.addEventListener('click', function() {
+                const cartCount = document.querySelector('.fa-shopping-cart + span');
+                let count = parseInt(cartCount.textContent);
+                cartCount.textContent = count + 1;
+                
+                // Animation
+                cartCount.classList.add('animate-bounce');
+                setTimeout(() => {
+                    cartCount.classList.remove('animate-bounce');
+                }, 1000);
+            });
+        });
+        
+        // Mobile menu toggle (simplified)
+        document.querySelector('.fa-bars').addEventListener('click', function() {
+            alert('Menu mobile seria implementado aqui!');
+        });
+    </script>
+</body>
+</html>
